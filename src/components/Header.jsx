@@ -24,21 +24,28 @@ const Header = () => {
         <Link to="/#research" className="nav-link para-text">
           Research
         </Link>
-        <Link to="/#experience" className="nav-link para-text">
-          Experience
+         <Link to="/#awards" className="nav-link para-text">
+          Awards
+        </Link>
+        <Link to="/#expertise" className="nav-link para-text">
+          Expertise 
         </Link>
         <Link to="/#publications" className="nav-link para-text">
           Publications
         </Link>
-        <Link to="/#awards" className="nav-link para-text">
-          Awards
+        <Link to="/#cognitude" className="nav-link para-text">
+          Cognitude 
         </Link>
+        <Link to="/#parceldrop" className="nav-link para-text">
+          Parcel Drop 
+        </Link>
+       
       </nav>
 
       <div className="header-right only-windows">
-        <Link to="/connect" className="white-bg-btn">
+        <a href="tel:+919160594524" className="white-bg-btn">
           Lets connect
-        </Link>
+        </a>
       </div>
 
       {/* Mobile Hamburger Icon */}
@@ -61,12 +68,15 @@ const Header = () => {
           <Link to="/#research" className="mobile-nav-link" onClick={closeMenu}>
             Research
           </Link>
+            <Link to="/#awards" className="mobile-nav-link" onClick={closeMenu}>
+            Awards
+          </Link>
           <Link
-            to="/#experience"
+            to="/#expertise"
             className="mobile-nav-link"
             onClick={closeMenu}
           >
-            Experience
+            Expertise
           </Link>
           <Link
             to="/#publications"
@@ -75,19 +85,20 @@ const Header = () => {
           >
             Publications
           </Link>
-          <Link to="/#awards" className="mobile-nav-link" onClick={closeMenu}>
-            Awards
+        
+          <Link to="/#cognitude" className="mobile-nav-link" onClick={closeMenu}>
+            Cognitude 
           </Link>
-          <Link to="/blogs" className="mobile-nav-link" onClick={closeMenu}>
-            Blogs
+          <Link to="/#parceldrop" className="mobile-nav-link" onClick={closeMenu}>
+            Parcel Drop 
           </Link>
-          <Link
-            to="/connect"
+          <a
+            href="tel:+919160594524"
             className="white-bg-btn mobile-cta"
             onClick={closeMenu}
           >
             Lets connect
-          </Link>
+          </a>
         </nav>
       </div>
     </header>

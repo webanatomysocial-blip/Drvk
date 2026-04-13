@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import gsap from "gsap";
 import "../../css/homeCss/mouse-blur-hero.css";
-import heroBg from "../../assets/banner.avif";
+import heroBg from "../../assets/home-banner.jpg";
 
 const MouseBlurHero = () => {
   const containerRef = useRef(null);

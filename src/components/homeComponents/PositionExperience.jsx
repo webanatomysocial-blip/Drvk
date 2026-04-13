@@ -3,19 +3,35 @@ import "../../css/homeCss/PositionExperience.css";
 
 const experiences = [
   {
-    role: "Principal Investigator",
+    role: "principal investigator - cognitive scientist",
     title: "Semantic Processing in Bilingual Children",
-    place: "IIT hyderabad",
+    place: "CSRI - DST  - IIT Hyderabad",
   },
   {
-    role: "Principal Investigator",
+    role: "principal investigator - cognitive scientist",
     title: "Distractor Suppression in Children",
     place: "Dominique Lamy's Visual Cognition Lab, Tel Aviv University, Israel",
   },
   {
-    role: "Principal Investigator",
+    role: "principal investigator - cognitive scientist",
+    title: "Cognitive Scientist, cognitive functions in patients with substance abuse disorder",
+    place: "Cognitude enterprises  pvt ltd, hyderabad",
+  },
+  { 
+    role: "principal investigator - cognitive scientist",
+    title: "Psychological profiling of pre and post-bariatric patients",
+    place: "Center for Psychology, University of Hyderabad, Telangana",
+  },
+  {
+    role: "cognitive scientist",
+    title: "development of skill-based neurocognitive testing protocol to assess cognition and diagnose dementia in a context of complex skill and low literacy",
+    place: "ICMR - NIMHNAS & Centre for Neural & Cognitive science, University of Hyderabad, Hyderabad",
+  },
+
+  {
+    role: "principal investigator - cognitive scientist",
     title: "Psychological Distress in Indian Adults",
-    place: "Center for Health Psychology, University of Hyderabad, Telangana",
+    place: "Center for Psychology, University of Hyderabad, Telangana",
   },
   {
     role: "Cognitive Scientist",

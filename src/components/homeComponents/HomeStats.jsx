@@ -3,6 +3,14 @@ import React from "react";
 import "../../css/homeCss/HomeStats.css";
 
 const stats = [
+   {
+    number: "25+",
+    description: "Peer-reviewed journal articles & book chapters",
+  },
+   {
+    number: "7",
+    description: "International research positions across 7 countries",
+  },
   {
     number: "11",
     description: (
@@ -18,14 +26,8 @@ const stats = [
       </>
     ),
   },
-  {
-    number: "25+",
-    description: "Peer-reviewed journal articles & book chapters",
-  },
-  {
-    number: "5",
-    description: "International research positions across 7 countries",
-  },
+ 
+ 
 
   {
     number: "1",
@@ -46,16 +48,19 @@ const HomeStats = () => {
       </div>
       <div className="hs-section-left-right-content">
         <p className="small-sub-head-text">
-          My work includes patented technological solutions and enterprise-level
-          implementations.
+          I bridge academic research with
+            real-world applications through my ventures in education, cognitive
+            technology, and AI.
         </p>
         <div className="large-head-text">
           <p className="para-text">
-            I'm Dr V Keerthana Kapiley, I bridge academic research with
-            real-world applications through my ventures in education, cognitive
-            technology, and AI.
+          
+
+
+             My work includes patented technological solutions and enterprise-level
+          implementations.
           </p>
-          <a href="" className="white-bg-btn">
+          <a href="tel:+9160594524" className="white-bg-btn">
             Lets Connect
           </a>
         </div>

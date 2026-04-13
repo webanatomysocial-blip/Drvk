@@ -100,6 +100,10 @@
   .pe-section {
     padding: 60px 20px;
   }
+  .pe-title-col .sub-head-text {
+  padding-bottom: 5px !important;
+
+}
   .pe-header {
     flex-direction: column;
     text-align: left;

@@ -1,6 +1,7 @@
 // src/components/homeComponents/HomeDomains.jsx
 import React from "react";
 import "../../css/homeCss/HomeDomains.css";
+import researchDomainImg from "../../assets/Research-Domain.jpg";
 
 const domains = [
   {
@@ -32,23 +33,68 @@ const domains = [
 const HomeDomains = ({ id }) => {
   return (
     <section className="hd-section" id={id}>
-      {/* Top header row */}
-      <div className="hd-header">
-        <h2 className="hd-title head-text">Research Domains//</h2>
-      </div>
+      
+        {/* Left Side - Heading + Image (Sticky) */}
+        <div className="hd-left">
+          <h2 className="hd-title head-text">Research Domains//</h2>
+          <img 
+            src={researchDomainImg} 
+            alt="Research Domains" 
+            className="research-domain-img" 
+          />
+        </div>
 
-      {/* 2x2 Card Grid */}
-      <div className="hd-grid">
-        {domains.map((domain) => (
-          <div key={domain.number} className="hd-card">
-            <div className="hd-card-number">{domain.number}</div>
-            <div className="hd-card-body">
-              <h3 className="hd-card-title sub-head-text">{domain.title}</h3>
-              <p className="hd-card-desc sub-para-text">{domain.description}</p>
+        {/* Right Side - Stacked Cards with Two Sticky Groups */}
+        <div className="hd-right">
+          {/* First Sticky Group: 01 & 02 */}
+
+          <div className="hd-sticky-group">
+            <div className="hd-card">
+              <div className="hd-card-number">{domains[0].number}</div>
+              <div className="hd-card-body">
+                <h3 className="hd-card-title sub-head-text">{domains[0].title}</h3>
+                <p className="hd-card-desc sub-para-text">{domains[0].description}</p>
+              </div>
             </div>
+
+            
           </div>
-        ))}
-      </div>
+          <div className="hd-sticky-group">
+           <div className="hd-card">
+              <div className="hd-card-number">{domains[1].number}</div>
+              <div className="hd-card-body">
+                <h3 className="hd-card-title sub-head-text">{domains[1].title}</h3>
+                <p className="hd-card-desc sub-para-text">{domains[1].description}</p>
+              </div>
+            </div>
+
+            
+          </div>
+          {/* Second Sticky Group: 03 & 04 */}
+          <div className="hd-sticky-group">
+            <div className="hd-card">
+              <div className="hd-card-number">{domains[2].number}</div>
+              <div className="hd-card-body">
+                <h3 className="hd-card-title sub-head-text">{domains[2].title}</h3>
+                <p className="hd-card-desc sub-para-text">{domains[2].description}</p>
+              </div>
+            </div>
+
+          
+          </div>
+          <div className="hd-sticky-group">
+              <div className="hd-card">
+              <div className="hd-card-number">{domains[3].number}</div>
+              <div className="hd-card-body">
+                <h3 className="hd-card-title sub-head-text">{domains[3].title}</h3>
+                <p className="hd-card-desc sub-para-text">{domains[3].description}</p>
+              </div>
+            </div>
+
+          
+          </div>
+        </div>
+     
     </section>
   );
 };

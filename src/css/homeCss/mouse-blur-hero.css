@@ -34,7 +34,7 @@
   height: 100%;
   background-size: cover;
   background-position: center;
-  filter: blur(10px);
+  filter: blur(13px);
   transform: scale(1);
   z-index: 1;
 }
@@ -68,16 +68,17 @@
 }
 
 .role-text {
-  font-size: 14px;
+  font-size: 25px;
   letter-spacing: 0.1em;
   color: var(--black-color);
-  text-transform: uppercase;
+  text-transform: capitalize;
+  font-weight: 700 !important;
 }
 
 .name-text {
   font-size: 120px !important;
-  font-weight: 400;
-  color: var(--black-color);
+  font-weight: 500 !important;
+  color: var(--white-color);
   line-height: 1.4em;
   text-align: center;
   position: absolute;
@@ -150,6 +151,15 @@
   background-position: center top;
   z-index: 1;
 }
+.mobile-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6));
+  z-index: 2;
+}
 
 .mobile-hero-content {
   position: relative;
@@ -169,8 +179,11 @@
 
 .mobile-hero-name {
   font-size: clamp(2.4rem, 11vw, 5rem) !important;
-  font-weight: 400;
-  color: var(--black-color);
+  color: var(--white-color) !important;
   line-height: 1.1;
   margin: 0;
+}
+
+.mobile-hero-roles .role-text {
+  color: var(--white-color) !important;
 }

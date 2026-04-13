@@ -8,7 +8,7 @@ import brain from "../../assets/brain.avif";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const InterjectionInfo = () => {
+const InterjectionInfo = ({id}) => {
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -39,10 +39,10 @@ const InterjectionInfo = () => {
   }, []);
 
   const mainText =
-    "I'm also a network automation engineer,I integrate insights from cognitivescience,IT automation and Ai systems.";
+    "I'm also a network automation engineer, I integrate insights from cognitive science, IT automation and AI systems.";
 
   return (
-    <section className="ii-section" ref={sectionRef}>
+    <section className="ii-section" ref={sectionRef} id={id}>
       <div className="keerthana-section-sticky">
         <h2 className="head-text">The Inception of Parceldrop//</h2>
         <div className="ii-image-wrapper-sticky">

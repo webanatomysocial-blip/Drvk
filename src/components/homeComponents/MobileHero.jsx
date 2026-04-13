@@ -1,6 +1,6 @@
 import React from "react";
 import "../../css/homeCss/mouse-blur-hero.css";
-import heroBg from "../../assets/banner.avif";
+import heroBg from "../../assets/home-banner.jpg";
 
 const MobileHero = () => {
   return (
@@ -10,6 +10,7 @@ const MobileHero = () => {
         className="mobile-hero-bg"
         style={{ backgroundImage: `url(${heroBg})` }}
       />
+      <div className="mobile-hero-overlay" />
 
       {/* Content */}
       <div className="mobile-hero-content">

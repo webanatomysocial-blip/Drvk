@@ -6,7 +6,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const marqueeText =
-    "Cognitude Scientist . Entrepreneur . Dance & Art Curator . Researcher . ";
+    "Cognitude Scientist . Entrepreneur . Dance & Art Curator . Researcher .";
 
   return (
     <footer className="footer-wrapper">
@@ -65,23 +65,32 @@ const Footer = () => {
             </ul>
           </div>
 
+
           <div className="footer-link-col">
             <h4 className="footer-col-head small-sub-head-text-white">
               Socials
             </h4>
             <ul>
               <li>
-                <a href="#" className="footer-link para-text-white">
-                  Instagram
+                <a
+                  href="https://www.linkedin.com/in/keerthana-kapiley-652a6546/"
+                  className="footer-link para-text-white"
+                >
+                  LinkedIn
                 </a>
               </li>
               <li>
-                <a href="#" className="footer-link para-text-white">
-                  LinkedIn
+                <a
+                  href="https://scholar.google.com/citations?user=nFoMRVUAAAAJ&hl=en"
+                  className="footer-link para-text-white"
+                >
+                  Google Scholar
                 </a>
               </li>
             </ul>
           </div>
+
+        
 
           <div className="footer-link-col">
             <h4 className="footer-col-head small-sub-head-text-white">
@@ -90,18 +99,19 @@ const Footer = () => {
             <ul>
               <li>
                 <a
-                  href="mailto:name@mail.com"
+                  href="mailto:kapileyk@gmail.com"
                   className="footer-link para-text-white"
+                  style={{textTransform:'none'}}
                 >
-                  Email : name@mail.com
+                  Email : kapileyk@gmail.com
                 </a>
               </li>
               <li>
                 <a
-                  href="tel:+910987654321"
+                  href="tel:+919160594524"
                   className="footer-link para-text-white"
                 >
-                  +91 09876 54321
+                 Phone : +919160594524
                 </a>
               </li>
             </ul>

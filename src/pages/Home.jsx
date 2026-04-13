@@ -19,13 +19,14 @@ export default function Home() {
       <MobileHero />
       <HomeTextFade id="about" />
       <HomeStats />
-      <InterjectionInfo />
+    
       <HomeDomains id="research" />
       <Presentations id="awards" />
-      <PositionExperience id="experience" />
+      <PositionExperience id="expertise" />
       <Publications id="publications" />
 
-      <Cognitude />
+      <Cognitude id="cognitude" />
+        <InterjectionInfo id="parceldrop" />
     </>
   );
 }

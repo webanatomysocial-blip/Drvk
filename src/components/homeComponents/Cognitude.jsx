@@ -8,9 +8,9 @@ import img5 from "../../assets/COGNITUDE/5.avif";
 import sase from "../../assets/cog.avif";
 import ctaVideo from "../../assets/videos/cta.mp4";
 
-const Cognitude = () => {
+const Cognitude = ({id}) => {
   return (
-    <section className="cognitude-section">
+    <section className="cognitude-section" id={id}>
       <div className="cognitude-header">
         <h2 className="head-text">The Inception of COGNITUDE//</h2>
 
@@ -119,17 +119,12 @@ const Cognitude = () => {
             </li>
             <li className="para-text">
               To assess the framework's effect on learning outcomes, engagement,
-              and retention in various sociolinguistic school environments.
+              and retention in various social cognitive environments.
             </li>
             <li className="para-text">
               Early personality development and career counselling.
             </li>
-            <li className="para-text">
-              The company is currently piloting data from four schools in total,
-              three in Vishakhapatnam, Andhra Pradesh (PhD thesis by Praveen
-              Kumar, School of Social Sciences, Osmania University), and one in
-              Madhanpalli, Andhra Pradesh.
-            </li>
+           
           </ul>
         </div>
       </div>

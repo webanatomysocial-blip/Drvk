@@ -38,6 +38,30 @@ h2,
 h3,
 h4,
 h5,
+h6,
+.big-text-head,
+.big-text-head-white,
+.head-text,
+.head-text-white,
+.sub-head-text,
+.sub-head-text-white,
+.small-sub-head-text,
+.small-sub-head-text-white,
+.black-bg-btn,
+.white-bg-btn,
+.transparent-bg-btn,
+.nav-link,
+.mobile-nav-link,
+.footer-link,
+.logo-text {
+  text-transform: capitalize;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
 h6 {
   margin: 0;
   padding: 0;

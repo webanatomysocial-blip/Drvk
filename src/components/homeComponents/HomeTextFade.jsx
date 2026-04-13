@@ -41,10 +41,7 @@ const HomeTextFade = () => {
 
   // Each string in this array is one visual line — no indentation, no embedded \n
   const lines = [
-    "I am a cognitive neuroscientist (NPDF) and entrepreneur working at the",
-    "intersection of brain, behaviour, language, and intelligent systems. My",
-    "research investigates the neural and cognitive mechanisms underlying",
-    "language and attention, with a particular focus on bilingualism, child development, and clinical neuroscience.",
+    "I am a cognitive neuroscientist (National Post Doctoral Fellow - DST, Govt of India) and entrepreneur working at the intersection of brain, behaviour, language, and intelligent systems. My research investigates the neural and cognitive mechanisms with a particular focus on developmental cognitive science and clinical neuroscience.",
   ];
 
   return (
