@@ -1,0 +1,63 @@
+/* src/css/homeCss/HomeTextFade.css */
+
+.htf-section {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 80px;
+  overflow: hidden;
+}
+
+.htf-container {
+  width: 100%;
+  text-align: left;
+}
+
+.htf-line {
+  line-height: 1.4;
+  display: block;
+}
+
+/* Group chars into words so wrapping happens at word boundaries, not mid-letter */
+.htf-word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.htf-char {
+  display: inline-block;
+  font-family: var(--font-primary);
+  font-size: 35px;
+  font-weight: 300;
+  color: #fbefdf;
+  filter: blur(2px);
+  will-change: filter, color;
+}
+
+.htf-char.htf-hidden {
+  visibility: hidden;
+}
+
+.htf-space {
+  display: inline-block;
+  width: 0.8em;
+}
+
+@media (max-width: 768px) {
+  .htf-section {
+    padding: 60px 20px;
+  }
+
+  .htf-container {
+    width: 100%;
+  }
+
+  .htf-br {
+    display: none;
+  }
+
+  .htf-char {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,294 @@
+/* src/css/index.css */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap");
+
+:root {
+  --white-color: white;
+  --black-color: black;
+  --Yellow-color: #ffdd00;
+  --mix: linear-gradient(90deg, #fb7239 0%, #b92d67 50%, #f209d6 100%);
+  --blue: #0033bf;
+  --grey: #e7e7e7;
+  --grey-bg: #9b9b9b;
+  --progress-active-bg: rgb(116, 116, 116);
+  --font-primary: "inter", sans-serif;
+  --font-secondary: "inter", sans-serif;
+  --transition-slow: 1.2s cubic-bezier(0.65, 0, 0.35, 1);
+  --transition-medium: 0.5s ease-in-out;
+  --transition-fast: 0.3s ease;
+}
+
+/* Visibility Utilities */
+@media (min-width: 769px) {
+  .only-mobile {
+    display: none !important;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-primary) !important;
+}
+
+/* Global Typography */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+  letter-spacing: 0px;
+  font-family: "Inter", sans-serif;
+  font-weight: 300 !important; /* Bold headings by default per design */
+}
+
+.big-text-head {
+  font-size: 60px !important;
+  font-weight: 300;
+  color: var(--black-color);
+  line-height: 1.4;
+  font-family: "Inter", sans-serif;
+}
+.big-text-head-white {
+  font-size: 60px !important;
+  font-weight: 300;
+  color: var(--white-color);
+  line-height: 1.4;
+  font-family: "Inter", sans-serif;
+}
+
+/* Headings: 46px */
+.head-text {
+  font-size: 28px !important;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  color: var(--black-color);
+  line-height: 1.2;
+}
+
+.head-text-white {
+  font-size: 28px !important;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  color: var(--white-color);
+  line-height: 1.2;
+}
+
+/* Sub-headings */
+.sub-head-text {
+  font-size: 26px !important;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--black-color);
+}
+
+.sub-head-text-white {
+  font-size: 26px !important;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  line-height: 1.4;
+  color: var(--white-color);
+}
+.small-sub-head-text {
+  font-size: 16px !important;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--black-color);
+}
+
+.small-sub-head-text-white {
+  font-size: 16px !important;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--white-color);
+}
+
+/* Paragraphs: 16px */
+.para-text {
+  font-size: 16px;
+  font-family: "Inter", sans-serif; /* Adjusted to Inter to match screenshots */
+  font-weight: 400;
+  line-height: 1.6;
+  color: #333; /* Darker than gray for readability */
+}
+
+.para-text-white {
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--white-color);
+}
+
+.small-sub-para-text {
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #000000;
+  padding-bottom: 20px;
+}
+
+.small-sub-para-text-white {
+  font-size: 14px;
+  font-family: var(--font-secondary);
+  font-weight: 300;
+  line-height: 1.4;
+  color: var(--white-color);
+  font-weight: 300 !important;
+}
+.sub-para-text {
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #666;
+  padding-bottom: 20px;
+}
+
+.sub-para-text-white {
+  font-size: 16px;
+  font-family: var(--font-secondary);
+  font-weight: 300;
+  line-height: 1.4;
+  color: var(--white-color);
+  font-weight: 300 !important;
+}
+
+/* fonts End  */
+
+/* buttons start  */
+
+.black-bg-btn {
+  background-color: var(--white-color);
+  color: var(--black-color);
+  padding: 10px 30px;
+  text-decoration: none;
+  border: 1px solid var(--black-color);
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease-in-out;
+  font-size: 14px;
+  line-height: 1.2;
+  font-family: var(--font-secondary);
+  width: fit-content;
+  z-index: 10;
+}
+.arrow-icon {
+  transition: all 0.3s ease-in-out;
+}
+.black-bg-btn:hover {
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+
+.black-bg-btn:hover .arrow-icon {
+  transform: translateX(6px);
+}
+
+.white-bg-btn {
+  background-color: var(--white-color);
+  color: var(--black-color);
+  padding: 10px 30px;
+  text-decoration: none;
+  border: 1px solid var(--black-color);
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  line-height: 1.2;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-family: var(--font-secondary);
+  width: fit-content;
+  margin: 10px 0;
+  /* Change to 1 or animate in */
+  z-index: 1;
+}
+
+.white-bg-btn:hover {
+  background-color: var(--black-color);
+  /* dark on hover */
+  color: var(--white-color);
+  /* white text */
+  border-color: var(--black-color);
+}
+
+.white-bg-btn:hover .arrow-icon {
+  transform: translateX(6px);
+}
+
+.transparent-bg-btn {
+  background-color: transparent;
+  /* usually white or light */
+  color: var(--blue);
+  /* usually black or dark */
+  padding: 0px;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  margin: 20px 0;
+  font-size: 16px;
+  font-family: var(--font-secondary);
+  width: fit-content;
+  border: none;
+
+  /* Change to 1 or animate in */
+  z-index: 1;
+}
+
+.transparent-bg-btn:hover .arrow-icon {
+  transform: translateX(6px);
+}
+
+/* buttons End */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--white-color) !important;
+}
+
+@media (max-width: 768px) {
+  .only-windows {
+    display: none !important;
+  }
+
+  body {
+    padding-top: 80px;
+  }
+
+  /* Mobile Typography Overrides */
+  .big-text-head,
+  .big-text-head-white {
+    font-size: 36px !important;
+  }
+
+  .head-text,
+  .head-text-white {
+    font-size: 26px !important;
+  }
+
+  .sub-head-text,
+  .sub-head-text-white {
+    font-size: 20px;
+  }
+}

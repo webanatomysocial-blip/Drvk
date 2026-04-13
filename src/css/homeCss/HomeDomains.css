@@ -1,0 +1,97 @@
+/* src/css/homeCss/HomeDomains.css */
+
+.hd-section {
+  background-color: #fafaff;
+  padding: 100px 60px;
+  width: 100%;
+}
+
+/* ── Header row ── */
+.hd-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 48px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.hd-title {
+  /* Uses global .head-text */
+  flex-shrink: 0;
+  color: #111;
+}
+
+.hd-intro {
+  /* Uses global .para-text */
+  max-width: 380px;
+  color: #666;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+/* ── 2×2 Card Grid ── */
+.hd-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.hd-card {
+  background-color: #f1e9e1;
+  padding: 28px 32px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 240px;
+  gap: 20px;
+}
+
+.hd-card-number {
+  text-align: right;
+  font-size: 14px;
+  font-weight: 400;
+  color: #999;
+  font-family: "Inter", sans-serif;
+}
+
+.hd-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hd-card-title {
+  /* Uses global .sub-head-text */
+  color: #111;
+}
+
+.hd-card-desc {
+  /* Uses global .sub-para-text */
+  color: #666;
+  margin: 0;
+  padding: 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hd-section {
+    padding: 60px 20px;
+  }
+
+  .hd-header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .hd-intro {
+    text-align: left;
+    max-width: 100%;
+  }
+
+  .hd-grid {
+    grid-template-columns: 1fr;
+  }
+}

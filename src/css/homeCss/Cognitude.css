@@ -1,0 +1,291 @@
+/* src/css/homeCss/Cognitude.css */
+
+.cognitude-section {
+  background-color: var(--white-color);
+  padding: 100px 80px;
+  width: 100%;
+}
+
+.cognitude-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 60px;
+  position: sticky;
+  top: 80px;
+  z-index: 10;
+  background-color: var(--white-color);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.cognitude-header .para-text {
+  max-width: 400px;
+}
+
+.cognitude-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px; /* Small gap between images as seen in the grid */
+}
+
+/* Base Card Styling */
+.cog-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: #f5f5f5;
+  min-height: 350px;
+  padding: 30px;
+}
+
+/* Image Background */
+.cog-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  object-position: 0 25%;
+}
+
+/* Overlay and Content Positioning */
+.cog-overlay {
+  position: relative;
+  z-index: 2;
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  width: 100%;
+  height: auto;
+  min-height: 56px;
+  background-color: #f5f5f556;
+  backdrop-filter: blur(8px);
+  pointer-events: none;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.cog-overlay .small-sub-head-text {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 500;
+  color: var(--black-color, #000);
+  opacity: 1;
+  flex-shrink: 0;
+}
+
+.cog-overlay .small-sub-para-text {
+  max-width: 90%;
+  padding-bottom: 0;
+  margin-top: 12px;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transform: translateY(10px);
+  transition:
+    opacity 0.3s ease-in-out,
+    max-height 0.4s ease-in-out,
+    transform 0.3s ease-in-out,
+    margin-top 0.3s ease-in-out;
+}
+
+.cog-card:hover .small-sub-para-text {
+  opacity: 1;
+  max-height: 200px;
+  transform: translateY(0);
+  margin-top: 12px;
+}
+
+/* Top Row Cards span 3 columns each (half screen) */
+.top-card {
+  grid-column: span 3;
+  min-height: 400px;
+  justify-content: flex-end !important;
+}
+
+/* Bottom Row Cards span 2 columns each (one third screen) */
+.bottom-card {
+  grid-column: span 2;
+  min-height: 400px;
+  justify-content: flex-end;
+}
+
+/* Positioning content based on top/bottom row */
+.cog-overlay-top {
+  justify-content: flex-start; /* Title and text at the top */
+}
+
+.cog-overlay-bottom {
+  justify-content: flex-end; /* Title and text at the bottom */
+}
+
+/* Hover effects (optional, keeping it subtle) */
+.cog-card {
+  cursor: pointer;
+}
+.cog-bg {
+  transition: transform 0.6s ease;
+}
+.cog-card:hover .cog-bg {
+  transform: scale(1.03);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .cognitude-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .top-card {
+    grid-column: span 1;
+  }
+  .bottom-card {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .cognitude-section {
+    padding: 60px 20px;
+  }
+  .cognitude-header {
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .cognitude-grid {
+    grid-template-columns: 1fr;
+  }
+  .top-card,
+  .bottom-card {
+    grid-column: span 1;
+    min-height: 300px;
+  }
+
+  /* Mobile: no hover effects — show all text by default */
+  .cog-overlay .small-sub-head-text,
+  .cog-overlay .small-sub-para-text {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: none;
+    margin-top: 12px;
+  }
+
+  .cog-card:hover .small-sub-para-text {
+    opacity: 1;
+    max-height: none;
+    transform: translateY(0);
+  }
+
+  .cog-card:hover .cog-bg {
+    transform: none;
+  }
+}
+
+/* ─── Sticky Section (now uses cognitude-header for sticky) ─── */
+.cog-sticky-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 60px 0 40px;
+}
+
+.cog-sticky-image-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+/* ─── Objectives Container ───────────────────────────── */
+.cog-objectives-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: flex-start;
+  padding-bottom: 80px;
+}
+
+/* Left: Video */
+.cog-objectives-left {
+  position: sticky;
+  top: 200px;
+}
+
+.cog-cta-video {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  object-fit: cover;
+}
+
+/* Right: Bullet list */
+.cog-objectives-right {
+  padding-top: 10px;
+}
+
+.cog-objectives-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cog-objectives-list li.para-text {
+  padding-left: 28px;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding-bottom: 24px;
+}
+
+.cog-objectives-list li.para-text::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--black-color, #000);
+}
+
+.cog-objectives-list li.para-text:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* ─── Responsive: Sticky + Objectives ───────────────── */
+@media (max-width: 1024px) {
+  .cog-objectives-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .cog-objectives-left {
+    position: relative;
+    top: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .cog-sticky-section {
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px 0 30px;
+    position: relative;
+  }
+
+  .cog-objectives-container {
+    padding-bottom: 50px;
+  }
+}

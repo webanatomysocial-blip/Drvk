@@ -1,0 +1,222 @@
+/* src/css/homeCss/Publications.css */
+
+.pub-section {
+  background-color: #000000; /* Pure black */
+  padding: 100px 80px;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.pub-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 80px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #333;
+}
+
+.pub-intro {
+  max-width: 400px;
+  text-align: right;
+  opacity: 0.9;
+  color: #ffffff;
+}
+
+.pub-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.pub-row {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 35px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  overflow: hidden;
+  margin: 15px 0;
+  background-color: transparent !important;
+}
+
+/* 4 Corner Ticks */
+.corner-tick {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #444;
+  z-index: 5;
+  transition: all 0.4s ease;
+  pointer-events: none;
+}
+
+.corner-tick.tl {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+.corner-tick.tr {
+  top: 0;
+  right: 0;
+  border-left: none;
+  border-bottom: none;
+}
+.corner-tick.bl {
+  bottom: 0;
+  left: 0;
+  border-right: none;
+  border-top: none;
+}
+.corner-tick.br {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+}
+
+/* The Expanding White Background */
+.pub-row::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background-color: #ffffff !important;
+  z-index: 1;
+  transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pub-row:hover::after {
+  height: 100%;
+}
+
+/* The Content Wrapper */
+.pub-col {
+  position: relative;
+  z-index: 4; /* Higher than the ::after background */
+  display: flex;
+  flex: 1;
+  padding-right: 15px;
+  flex-direction: column;
+}
+.pub-year-col {
+  flex: 0.2 !important;
+}
+
+.pub-row-text {
+  color: #ffffff !important; /* Default white */
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  transition:
+    color 0.4s ease,
+    opacity 0.4s ease,
+    transform 0.4s ease;
+  margin: 0;
+}
+
+.pub-title-text {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.pub-row:hover .pub-row-text {
+  color: #000000 !important; /* Force black text */
+}
+
+.pub-row:hover .pub-title-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pub-row:hover .corner-tick {
+  border-color: #000000;
+}
+
+/* Hide/Show logic for the first column */
+
+.pub-row:hover .pub-title-col {
+  color: #000000 !important;
+}
+
+.pub-year-col {
+  text-align: right;
+  justify-content: center;
+}
+
+/* Responsive adjustment */
+@media (max-width: 1024px) {
+  .pub-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pub-section {
+    padding: 60px 20px;
+  }
+  .pub-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .pub-intro {
+    text-align: left;
+  }
+  .pub-row {
+    display: flex;
+    flex-direction: column;
+    padding: 35px 20px;
+  }
+  /* Disable hover background expansion on mobile */
+  .pub-row::after {
+    display: none !important;
+  }
+  /* Ensure title is always visible on mobile */
+  .pub-title-text {
+    opacity: 1;
+    transform: none;
+  }
+  /* Prevent color change on hover on mobile */
+  .pub-row:hover .pub-row-text {
+    color: #ffffff !important;
+  }
+  /* Keep corner ticks white/gray on mobile hover */
+  .pub-row:hover .corner-tick {
+    border-color: #444;
+  }
+}
+
+.pub-view-all-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.pub-view-all-btn {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 30px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  border-radius: 30px;
+}
+
+.pub-view-all-btn:hover {
+  background: #fff;
+  color: #000;
+}

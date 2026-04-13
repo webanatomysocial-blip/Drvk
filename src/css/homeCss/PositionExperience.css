@@ -1,0 +1,121 @@
+/* src/css/homeCss/PositionExperience.css */
+
+.pe-section {
+  padding: 100px 80px;
+  background-color: var(--white-color);
+  width: 100%;
+}
+
+.pe-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.pe-main-title {
+  flex-shrink: 0;
+}
+
+.pe-intro {
+  max-width: 380px;
+  text-align: right;
+  color: #666;
+}
+
+.pe-rows-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.pe-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 20px 0;
+  border-bottom: 1px solid #e8e8e8;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+/* Background Reveal Effect */
+.pe-row::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background-color: var(--black-color);
+  z-index: 1;
+  transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pe-row:hover::after {
+  height: 100%;
+}
+
+.pe-col {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-right: 30px;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pe-row:hover .pe-col {
+  transform: translateX(40px);
+}
+
+/* Color swapping on hover */
+.pe-row:hover .sub-head-text,
+.pe-row:hover .sub-para-text,
+.pe-row:hover .small-sub-head-text {
+  color: #FBEFDF;
+}
+
+.pe-row .sub-head-text,
+.pe-row .sub-para-text {
+  transition: color 0.5s ease;
+}
+
+/* Responsive adjustment */
+@media (max-width: 1024px) {
+  .pe-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .pe-place-col {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .pe-section {
+    padding: 60px 20px;
+  }
+  .pe-header {
+    flex-direction: column;
+    text-align: left;
+    gap: 16px;
+  }
+  .pe-intro {
+    text-align: left;
+    max-width: 100%;
+  }
+  .pe-row {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 30px 0;
+  }
+  .pe-row:hover .pe-col {
+    transform: translateX(20px); /* Reduced on mobile */
+  }
+}
