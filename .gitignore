@@ -1,24 +1,39 @@
-# Logs
-logs
+# .gitignore
+
+# Ignore everything by default
+*
+
+# But allow (unignore) only the files/folders you want to track
+!public/
+!src/
+!vite.config.js
+!index.html
+!dist/
+!index.php
+
+# Optional: If you want to track files inside the allowed folders
+# (this is usually needed)
+!public/**/*
+!src/**/*
+!dist/**/*
+
+# Ignore common build artifacts and unnecessary files even inside allowed folders
+dist/**/*.map
 *.log
+.env
+.env.local
+.env.*.local
+
+# Node.js / Vite specific ignores (even if inside allowed dirs)
+node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+.pnpm-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# Editor / IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
