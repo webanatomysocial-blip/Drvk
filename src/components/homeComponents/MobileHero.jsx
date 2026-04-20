@@ -1,6 +1,6 @@
 import React from "react";
 import "../../css/homeCss/mouse-blur-hero.css";
-import heroBg from "../../assets/home-banner.jpeg";
+import heroBg from "../../assets/mobile-banner.jpeg";
 
 const MobileHero = () => {
   return (

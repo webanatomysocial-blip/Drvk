@@ -69,6 +69,10 @@
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.pe-col span {
+  color: blue;
+}
+
 .pe-row:hover .pe-col {
   transform: translateX(40px);
 }
@@ -78,6 +82,10 @@
 .pe-row:hover .sub-para-text,
 .pe-row:hover .small-sub-head-text {
   color: #FBEFDF;
+}
+
+.pe-row:hover .pe-col span {
+  color: white;
 }
 
 .pe-row .sub-head-text,
@@ -91,6 +99,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
+
   .pe-place-col {
     grid-column: span 2;
   }
@@ -100,26 +109,32 @@
   .pe-section {
     padding: 60px 20px;
   }
-  .pe-title-col .sub-head-text {
-  padding-bottom: 5px !important;
 
-}
+  .pe-title-col .sub-head-text {
+    padding-bottom: 5px !important;
+
+  }
+
   .pe-header {
     flex-direction: column;
     text-align: left;
     gap: 16px;
   }
+
   .pe-intro {
     text-align: left;
     max-width: 100%;
   }
+
   .pe-row {
     display: flex;
     flex-direction: column;
     gap: 15px;
     padding: 30px 0;
   }
+
   .pe-row:hover .pe-col {
-    transform: translateX(20px); /* Reduced on mobile */
+    transform: translateX(20px);
+    /* Reduced on mobile */
   }
 }

@@ -6,7 +6,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const marqueeText =
-    "Cognitude Scientist . Entrepreneur . Dance & Art Curator . Researcher .";
+    "Scientist . Entrepreneur . Dance & Art Curator .";
 
   return (
     <footer className="footer-wrapper">

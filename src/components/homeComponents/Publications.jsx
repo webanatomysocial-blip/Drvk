@@ -97,7 +97,7 @@ const Publications = ({ id }) => {
   return (
     <section className="pub-section" id={id}>
       <div className="pub-header">
-        <h2 className="head-text-white">Publications//</h2>
+        <h2 className="head-text-white">Select Publications//</h2>
       </div>
 
       <div className="pub-list">
